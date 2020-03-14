@@ -1,0 +1,1 @@
+[14-Mar-2020 23:42:03 Europe/Athens] PHP Warning:  chdir(): No such file or directory (errno 2) in /home/sp2020/public_html/editor/plugins/Codiad-Terminal/emulator/term.php on line 121
