@@ -1,0 +1,17 @@
+<!-- Form Payment Grid Snippet -->
+<div class=""> <!-- Form row brings closer together the controls -->
+  <div class="">
+    <label for="cc-num">Card Number:</label>
+    <input class="form-control" id="cc-num" type="text">
+  </div>
+
+  <div class="">
+    <label for="zip">Zip Code:</label>
+    <input class="form-control" id="zip" type="text">
+  </div>
+
+  <div class="">
+    <label for="cvv">CVV:</label>
+    <input class="form-control" id="cvv" type="text">
+  </div>
+</div>

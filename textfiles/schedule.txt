@@ -1,0 +1,22 @@
+<!-- schedule -->
+      <h5 class="mb-1">Keynote: Internet of Things</h5> 9:00am
+      <p class="mb-1">NodeStradamus</p>
+ 
+      <h5 class="mb-1">React Basics</h5> 10:00am
+      <p class="mb-1">Vivianne McVue</p>
+ 
+      <h5 class="mb-1">Hey, Mongo!</h5> 11:00am
+       <p class="mb-1">Jay Query</p>
+
+      <h5 class="mb-1">Lunch</h5>12:00pm
+      <p class="mb-1">Free pizza for everyone!</p>
+  
+      <h5 class="mb-1">Introducing ES2015</h5>1:00pm
+      <p class="mb-1">Ecma Scriptnstuff</p>
+  
+      <h5 class="mb-1">Getting Started With Redux</h5>2:00pm
+      <p class="mb-1">Robbie Redux</p>
+ 
+      <h5 class="mb-1">What's Babel?</h5> 3:00pm
+       <p class="mb-1">Json Babel</p>
+ <!-- /schedule -->

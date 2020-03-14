@@ -1,0 +1,12 @@
+<!-- footer -->
+<div class="row py-3">
+  <div class="col-md-7"> 
+      <!-- paste here a basic nav component -->
+      
+      
+      <!-- the third item of the menu needs to be a drop down. Copy split button component--->
+  </div>
+  <div class="col-md text-md-right">
+    <small>&copy; 2017 Full Stack Conf &amp; Treehouse</small>
+  </div>
+</div><!-- /footer -->
