@@ -1,4 +1,3 @@
-
 <?php
 
 function getSpeakers() {
@@ -16,15 +15,17 @@ function getSchedule() {
 	return $data;
 }
 
+// In case there is no database, you can create an array with you data for texting
 function getSpeakersxx() {
-$speakers = array();
-$speakers[1] = array ("lastname"=>"McVue", "firstname"=>"Vivianne", "photo"=>"vivianne.png");
-$speakers[2] = array ("lastname"=>"NodeStradamus", "firstname"=>"", "photo"=>"nodestradamus.png");
-$speakers[3] = array ("lastname"=>"Redux", "firstname"=>"Robbie", "photo"=>"robbie.png");
-return $speakers;
+	$speakers = array();
+	$speakers[1] = array ("lastname" => "McVue", "firstname" => "Vivianne", "photo" => "vivianne.png");
+	$speakers[2] = array ("lastname" => "NodeStradamus", "firstname" => "", "photo" => "nodestradamus.png");
+	$speakers[3] = array ("lastname" => "Redux", "firstname" => "Robbie", "photo" => "robbie.png");
+	return $speakers;
 }
 
 
+// NOT THE BEST WAY --> its better to use prepared statements
 // function newsletter($email) {
 // 	include ('db.php');
 // 	$count = $db->exec("insert into newsletter (email) values ('" . $email . "')");
@@ -36,29 +37,38 @@ function newsletter($email) {
 	$results = $db->prepare('insert into newsletter (email) values (?)');
 	$results->bindValue(1, $email);
 	$results->execute();
+
 	return $results->rowCount();
-	
+}
+
+function register($name, $email, $role) {
+	include ('db.php');
+	$results = $db->prepare('insert into registration (name, email, role) values (?,?,?)');
+	$results->bindValue(1, $name);
+	$results->bindValue(2, $email);
+	$results->bindValue(3, $role);
+	$results->execute();
+
+	return $results->rowCount();
 }
 
 function searchSpeaker($name) {
 	include ('db.php');
 	$name = '%' . $name . '%';
-	
+
 	$results = $db->prepare('select * from speakers where firstname like ? or lastname like ?');
 	$results->bindValue(1, $name);
 	$results->bindValue(2, $name);
 	$results->execute();
 	return $results;
-	
+
 }
 
-
-
 function displayemails() {
-	    include('inc/db.php');
-		$results = $db->query("select * from newsletter"); //if the query is wrong $results is false
-		$data = $results->fetchAll(PDO::FETCH_ASSOC);
-		return $data;
+	include('inc/db.php');
+	$results = $db->query("select * from newsletter"); //if the query is wrong $results is false
+	$data = $results->fetchAll(PDO::FETCH_ASSOC);
+	return $data;
 }
 
 ?>

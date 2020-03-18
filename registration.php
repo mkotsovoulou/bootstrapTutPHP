@@ -13,21 +13,24 @@
 			</div>
 			<div class="modal-body">
 				<!-- registration form -->
-				<form>
+
+
+				<form id="registrationForm">
 					<div class="alert alert-warning alert-dismissible fade show" role="alert">
 						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
 						<strong>Hurry!</strong> Early bird registration ends in two days.
 					</div>
+					<div id="flashMessage1" class="alert alert-success fade show" role="alert" style="display:none;"></div>
 					<h5 class="mb-4">Basic Info</h5>
 					<div class="form-group">
 						<label class="form-control-label" for="name">Name:</label>
-						<input type="text" class="form-control" id="name">
+						<input type="text" class="form-control" id="name" required>
 					</div>
 					<div class="form-group">
 						<label class="form-control-label" for="email">Email:</label>
-						<input type="email" class="form-control" id="email">
+						<input type="email" class="form-control" id="email" required>
 					</div>
 					<div class="form-group">
 						<label for="role">Job Role:</label>
@@ -40,7 +43,8 @@
 						</select>
 					</div>
 					<hr class="mb-4">
-					<button type="submit" class="btn btn-primary btn-lg">Register</button>
+					<button type="button" id="registerbtn" class="btn btn-primary btn-lg">Register</button>
+
 				</form>
 				<!-- /registration form -->
 			</div>

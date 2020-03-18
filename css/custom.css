@@ -8,7 +8,9 @@
 	background-size: cover;
 }
 
-#flashMessage {
+
+/* newsletter */
+#flashMessage2 {
 	display: none;
 	color: white;
 	background-color: #64ce83;

@@ -22,29 +22,10 @@
 				</span>
 
 			</div>
-			<div id="flashMessage">
-				Thank you for signing up for our newsletter
+			<div id="flashMessage2">
+
 			</div>
 		</div>
 	</div>
 	<hr><!-- /signup form -->
 </div>
-
-<script>
-	$(document).ready(function() {
-		$('#newsletter').click(function() {
-			var email = $('#emailToSave').val();
-
-			$.ajax({
-				type: "POST",
-				url: "insert_email.php",
-				data: {
-					p_email: email
-				}
-			}).done(function(msg) {
-				$('#flashMessage').html(msg);
-				$("#flashMessage").slideDown(1000).delay(1000).slideUp();
-			});
-		});
-	});
-</script>
