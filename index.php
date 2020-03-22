@@ -5,8 +5,6 @@ include("jumbotron.php");
 
 include("about.php");
 
-include("information.php");
-
 include("speakers.php");
 include("schedule.php");
 

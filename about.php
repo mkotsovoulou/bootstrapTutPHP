@@ -1,6 +1,6 @@
 <!-- about -->
-<div class="container">
-	<div id="about" class="row">
+<div id="about" class="container spacing">
+	<div class="row">
 		<div class="col-lg order-lg-2">
 			<h3 class="mb-4">About Full Stack Conf</h3>
 			<img class="mb-4 img-fluid rounded d-none d-sm-block" src="img/pdx.jpg" alt="Portland">

@@ -3,3 +3,15 @@
 [18-Mar-2020 08:03:18 UTC] PHP Warning:  log() expects parameter 1 to be float, string given in /home/sp2020/public_html/bootstrapTut/insert_registration.php on line 19
 [18-Mar-2020 08:03:31 UTC] PHP Warning:  log() expects parameter 1 to be float, string given in /home/sp2020/public_html/bootstrapTut/insert_registration.php on line 19
 [18-Mar-2020 08:03:37 UTC] PHP Warning:  log() expects parameter 1 to be float, string given in /home/sp2020/public_html/bootstrapTut/insert_registration.php on line 19
+[18-Mar-2020 19:37:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session_destoy() in /home/sp2020/public_html/bootstrapTut/head.php:28
+Stack trace:
+#0 /home/sp2020/public_html/bootstrapTut/index.php(3): include()
+#1 {main}
+  thrown in /home/sp2020/public_html/bootstrapTut/head.php on line 28
+[18-Mar-2020 19:37:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session_destoy() in /home/sp2020/public_html/bootstrapTut/head.php:28
+Stack trace:
+#0 /home/sp2020/public_html/bootstrapTut/signin.php(2): include()
+#1 {main}
+  thrown in /home/sp2020/public_html/bootstrapTut/head.php on line 28
+[18-Mar-2020 19:38:51 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/sp2020/public_html/bootstrapTut/signout.php on line 2
+[18-Mar-2020 19:40:21 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/sp2020/public_html/bootstrapTut/signout.php on line 2

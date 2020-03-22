@@ -1,0 +1,4 @@
+[18-Mar-2020 18:51:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function printr() in /home/sp2020/public_html/bootstrapTut/testSessions/page2.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/sp2020/public_html/bootstrapTut/testSessions/page2.php on line 5

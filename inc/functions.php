@@ -1,5 +1,28 @@
 <?php
 
+function login($email, $password) {
+	include ('db.php');
+	session_start();
+	$results = $db->prepare('SELECT role FROM users WHERE email = ? and password = ?');
+	$results->bindValue(1, $email);
+	$results->bindValue(2, $password);
+	$results->execute();
+	$data = $results->fetchAll(PDO::FETCH_ASSOC);
+	$x = $results->rowCount();
+
+	if ($x == 1) {
+		// LOGIN SUCCESS
+		$_SESSION["email"] = $email;
+		$_SESSION["role"] = $data[0]["role"];
+		return $data[0]["role"]; //return the first record of the results
+	} else {
+		return "X";
+		//LOGIN FAILED
+	}
+
+}
+
+
 function getSpeakers() {
 	include ('db.php');
 	$results = $db->query("select * from speakers"); //if the query is wrong $results is false

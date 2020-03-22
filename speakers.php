@@ -1,6 +1,6 @@
-<div class="container">
+<div id="speakers" class="container spacing">
 	<!-- speakers grid 6 columns-->
-	<h1 id="speakers" class="display-3 text-center mt-3 text-secondary"> Speakers</h1>
+	<h1 class="display-4 text-center text-muted"> Speakers</h1>
 
 
 	<div class="row">
@@ -10,12 +10,12 @@
 
 		foreach ($speakers as $speaker) {
 			?>
-			<div class="col-md-6 col-lg-4 ">
-				<div class="card" style="width: 18rem;">
+			<div class="col-md-6 col-lg-4 mb-3">
+				<div class="card  h-100">
 					<img src="img/<?php echo $speaker["photo"] ?>" class="card-img-top" alt="...">
 					<div class="card-body">
-						<h4 class="card-title text-secondary"><?php echo $speaker["firstname"] . " " . $speaker["lastname"]; ?> </h4>
-						<p class="card-text my-5">
+						<h4 class="card-title"><?php echo $speaker["firstname"] . " " . $speaker["lastname"]; ?> </h4>
+						<p class="card-text">
 							<?php echo $speaker["resume"]; ?>
 						</p>
 					</div>

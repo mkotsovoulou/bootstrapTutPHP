@@ -1,5 +1,5 @@
-<div class="container">
-	<h1 id="schedule" class="display-3 text-center mt-3 text-secondary"> Schedule</h1>
+<div id="schedule" class="container spacing">
+	<h1 class="display-3 text-center mt-3 text-secondary"> Schedule</h1>
 
 	<ul class="list-group">
 

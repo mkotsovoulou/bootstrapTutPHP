@@ -43,7 +43,7 @@
 						</select>
 					</div>
 					<hr class="mb-4">
-					<button type="button" id="registerbtn" class="btn btn-primary btn-lg">Register</button>
+					<button type="submit" id="registerbtn" class="btn btn-primary btn-lg">Register</button>
 
 				</form>
 				<!-- /registration form -->
