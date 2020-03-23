@@ -1,7 +1,14 @@
 <?php
 session_start();
-define("PROJECT_PATH", "/bootstrapTut". DIRECTORY_SEPARATOR);
-$_SESSION['isAdmin'] = 'Y';
+//temporary for testing and development
+//Remember to remove it
+//$_SESSION['isAdmin'] = 'Y';
+//$_SESSION['name'] = 'ADMIN';
+if ($_SESSION['isAdmin'] != 'Y') {
+	header("Location: /bootstrapTut/index.php");
+	exit;
+}
+define("PROJECT_PATH", "/bootstrapTut/");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +24,7 @@ $_SESSION['isAdmin'] = 'Y';
 	<link rel="stylesheet" href="<?php echo PROJECT_PATH ?>css/custom.css">
 
 	<script
-		src="<?php echo PROJECT_PATH ?>js/jquery-3.4.1.min.js"></script>
+		src="../js/jquery-3.4.1.min.js"></script>
 
 </head>
 

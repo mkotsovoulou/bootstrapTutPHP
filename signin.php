@@ -19,7 +19,7 @@ include("jumbotron.php");
 
 		<button id="signinbtn" type="submit" class="btn btn-primary">Submit</button>
 		<p id="" class="form-text text-muted">
-			Do not have an account? Register <a href="index.php#registration" data-toggle="modal" data-target="#register">here... </a>
+			Do not have an account? Register <a href="#registration" data-toggle="modal" data-target="#register">here... </a>
 		</p>
 	</form>
 	<div id="flashMessage" class="alert alert-success fade show" role="alert" style="display:none;"></div>

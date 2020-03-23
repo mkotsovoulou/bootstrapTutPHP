@@ -8,10 +8,6 @@ function login($email, $password) {
 	$results->execute();
 	$userInfo = $results->fetchAll(PDO::FETCH_ASSOC);
 
-	error_log("Count rows where email = " . count($userInfo), 0);
-	error_log("password typed " . $password, 0);
-	error_log("result from password verify  " . password_verify($password, $userInfo[0]["password"]), 0);
-
 	if (count($userInfo) == 1 && password_verify($password, $userInfo[0]["password"])) {
 		// LOGIN SUCCESS
 		$_SESSION["email"] = $email;

@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	//CODE to highlight the active link
 	$(".nav-item.nav-link").on("click", function() {
-		$(this).addClass("active").siblings().removeClass('active');;
+		$(this).addClass("active").siblings().removeClass('active');
 	});
 
 
@@ -38,6 +38,9 @@ $(document).ready(function() {
 		//Write the code to Verify password ... 
 		//If the password is wrong display a danger flash message
 		//else continue to submit the data and insert the registration
+
+
+
 
 		$.ajax({
 				type: "POST",

@@ -43,6 +43,10 @@ define("PROJECT_PATH", "/bootstrapTut". DIRECTORY_SEPARATOR);
 					<a class="nav-item nav-link" href="index.php#about">About</a>
 					<a class="nav-item nav-link" href="index.php#speakers">Speakers</a>
 					<a class="nav-item nav-link" href="index.php#schedule">Schedule</a>
+
+					<?php if ($_SESSION['isAdmin'] == 'Y') {
+						?> <a class="nav-item nav-link" href="admin/index.php">Go to Admin Panel</a> <?php
+					} ?>
 				</div>
 			</div>
 		</div>

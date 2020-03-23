@@ -1,3 +1,4 @@
 [22-Mar-2020 19:15:36 UTC] PHP Warning:  file_get_contents(): Filename cannot be empty in /home/sp2020/public_html/bootstrapTut/admin/demo_image_upload.php on line 24
 [22-Mar-2020 19:15:36 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/sp2020/public_html/bootstrapTut/admin/demo_image_upload.php on line 26
 [22-Mar-2020 19:22:54 UTC] PHP Parse error:  syntax error, unexpected 'isset' (T_ISSET), expecting '(' in /home/sp2020/public_html/bootstrapTut/admin/list_users.php on line 8
+[23-Mar-2020 18:54:50 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/sp2020/public_html/bootstrapTut/admin/admin_head.php on line 52
