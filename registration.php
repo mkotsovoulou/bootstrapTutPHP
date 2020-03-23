@@ -33,6 +33,14 @@
 						<input type="email" class="form-control" id="email" required>
 					</div>
 					<div class="form-group">
+						<label class="form-control-label" for="password1">Password:</label>
+						<input type="password" class="form-control" id="password1" required>
+					</div>
+					<div class="form-group">
+						<label class="form-control-label" for="password2">Verify Password:</label>
+						<input type="password" class="form-control" id="password2" required>
+					</div>
+					<div class="form-group">
 						<label for="role">Job Role:</label>
 						<select class="custom-select form-control" id="role">
 							<option value="full stack js developer">Full Stack JavaScript Developer</option>

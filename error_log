@@ -15,3 +15,17 @@ Stack trace:
   thrown in /home/sp2020/public_html/bootstrapTut/head.php on line 28
 [18-Mar-2020 19:38:51 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/sp2020/public_html/bootstrapTut/signout.php on line 2
 [18-Mar-2020 19:40:21 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/sp2020/public_html/bootstrapTut/signout.php on line 2
+[22-Mar-2020 17:55:00 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ']' in /home/sp2020/public_html/bootstrapTut/phpFilenames.php on line 13
+[22-Mar-2020 17:56:09 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in /home/sp2020/public_html/bootstrapTut/phpFilenames.php on line 13
+[23-Mar-2020 15:25:01 UTC] Count rows where email = np@yahoo.com
+[23-Mar-2020 15:25:01 UTC] password typed 111
+[23-Mar-2020 15:25:01 UTC] result from password verify  
+[23-Mar-2020 15:25:06 UTC] Count rows where email = np@yahoo.com
+[23-Mar-2020 15:25:06 UTC] password typed 123
+[23-Mar-2020 15:25:06 UTC] result from password verify  
+[23-Mar-2020 15:26:18 UTC] Count rows where email = 1
+[23-Mar-2020 15:26:18 UTC] password typed 123
+[23-Mar-2020 15:26:18 UTC] result from password verify  
+[23-Mar-2020 15:30:11 UTC] Count rows where email = 1
+[23-Mar-2020 15:30:11 UTC] password typed 123
+[23-Mar-2020 15:30:11 UTC] result from password verify  1

@@ -31,7 +31,13 @@ $(document).ready(function() {
 
 		var name = $('#name').val();
 		var email = $('#email').val();
+		var password1 = $('#password1').val();
+		var password2 = $('#password2').val();
 		var role = $('#role').val();
+
+		//Write the code to Verify password ... 
+		//If the password is wrong display a danger flash message
+		//else continue to submit the data and insert the registration
 
 		$.ajax({
 				type: "POST",
@@ -39,6 +45,7 @@ $(document).ready(function() {
 				data: {
 					p_name: name,
 					p_email: email,
+					p_password: password1,
 					p_role: role
 				}
 			}).done(function(msg) {
@@ -83,9 +90,10 @@ $(document).ready(function() {
 				p_email: email,
 				p_password: password
 			}
-		}).done(function(msg) {
+		}).done(function(loginMsg) {
 			//Login php returns X if there was an error
-			if (msg == "X") {
+			console.log("The message from login is " + loginMsg);
+			if (loginMsg == '0') {
 				$('#flashMessage').removeClass('alert-success').addClass('alert-danger');
 				displayMsg = "Wrong username or password. Try Again!";
 			} else {

@@ -4,6 +4,7 @@ include_once ('inc/functions.php');
 
 $name = $_POST['p_name'];
 $email = $_POST['p_email'];
+$password = $_POST['p_password'];
 $role = $_POST['p_role'];
 
 // $name = 'maira';
@@ -19,7 +20,8 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 	$message_array [0] = false;
 	$message_array [1] = "Not a valid email";
 	echo json_encode($message_array);
-} else if (register($name, $email, $role) == 1) {
+} //Call the register function to insert data in the registration table
+else if (register($name, $email, $password, $role) == 1) {
 	$message_array [0] = true;
 	$message_array [1] = "<b>Thank you</b> for registering";
 	echo json_encode($message_array);

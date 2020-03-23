@@ -3,20 +3,23 @@
 function login($email, $password) {
 	include ('db.php');
 	session_start();
-	$results = $db->prepare('SELECT role FROM users WHERE email = ? and password = ?');
+	$results = $db->prepare('SELECT * FROM registration WHERE email = ?');
 	$results->bindValue(1, $email);
-	$results->bindValue(2, $password);
 	$results->execute();
-	$data = $results->fetchAll(PDO::FETCH_ASSOC);
-	$x = $results->rowCount();
+	$userInfo = $results->fetchAll(PDO::FETCH_ASSOC);
 
-	if ($x == 1) {
+	error_log("Count rows where email = " . count($userInfo), 0);
+	error_log("password typed " . $password, 0);
+	error_log("result from password verify  " . password_verify($password, $userInfo[0]["password"]), 0);
+
+	if (count($userInfo) == 1 && password_verify($password, $userInfo[0]["password"])) {
 		// LOGIN SUCCESS
 		$_SESSION["email"] = $email;
-		$_SESSION["role"] = $data[0]["role"];
-		return $data[0]["role"]; //return the first record of the results
+		$_SESSION["name"] = $userInfo[0]["name"];
+		$_SESSION["isAdmin"] = $userInfo[0]["isAdmin"];
+		return 1;
 	} else {
-		return "X";
+		return 0;
 		//LOGIN FAILED
 	}
 
@@ -64,12 +67,16 @@ function newsletter($email) {
 	return $results->rowCount();
 }
 
-function register($name, $email, $role) {
+function register($name, $email, $password, $role) {
 	include ('db.php');
-	$results = $db->prepare('insert into registration (name, email, role) values (?,?,?)');
+	//Hash the password before inserting it into the table
+	$password = password_hash($password, PASSWORD_DEFAULT);
+
+	$results = $db->prepare('insert into registration (name, email, password, role) values (?,?,?,?)');
 	$results->bindValue(1, $name);
 	$results->bindValue(2, $email);
-	$results->bindValue(3, $role);
+	$results->bindValue(3, $password);
+	$results->bindValue(4, $role);
 	$results->execute();
 
 	return $results->rowCount();
@@ -92,6 +99,34 @@ function displayemails() {
 	$results = $db->query("select * from newsletter"); //if the query is wrong $results is false
 	$data = $results->fetchAll(PDO::FETCH_ASSOC);
 	return $data;
+}
+
+function getRegisteredUsers() {
+	include ('db.php');
+	$results = $db->query("select * from registration"); //if the query is wrong $results is false
+	$data = $results->fetchAll(PDO::FETCH_ASSOC);
+	return $data;
+
+}
+
+function updateAvatar($email, $img) {
+
+	include ('db.php');
+	$results = $db->prepare('update registration set avatar = ? where email = ?');
+	$results->bindValue(1, $img);
+	$results->bindValue(2, $email);
+	$results->execute();
+	return $results->rowCount();
+
+}
+
+function getAllUsers() {
+	include ('db.php');
+	$results = $db->query("select * from registration"); //if the query is wrong $results is false
+	$data = $results->fetchAll(PDO::FETCH_ASSOC);
+	return $data;
+
+
 }
 
 ?>

@@ -1,5 +1,4 @@
 <?php
-
 include("head.php");
 include("jumbotron.php");
 
