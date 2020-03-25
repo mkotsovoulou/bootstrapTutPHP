@@ -1,4 +1,8 @@
 <?php
+//var_dump($_SESSION);
+
+//echo $x;
+
 echo $_SESSION['username'];
 ?>
 

@@ -2,3 +2,30 @@
 [22-Mar-2020 19:15:36 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/sp2020/public_html/bootstrapTut/admin/demo_image_upload.php on line 26
 [22-Mar-2020 19:22:54 UTC] PHP Parse error:  syntax error, unexpected 'isset' (T_ISSET), expecting '(' in /home/sp2020/public_html/bootstrapTut/admin/list_users.php on line 8
 [23-Mar-2020 18:54:50 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/sp2020/public_html/bootstrapTut/admin/admin_head.php on line 52
+[25-Mar-2020 18:35:18 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/sp2020/public_html/bootstrapTut/admin/editRegisteredUser.php on line 13
+[25-Mar-2020 18:45:19 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/sp2020/public_html/bootstrapTut/inc/functions.php:116
+Stack trace:
+#0 /home/sp2020/public_html/bootstrapTut/admin/updateUser.php(9): updateRegistration('41', 'Nikolas', 'np@yahoo.com', 'full stack js d...')
+#1 {main}
+  thrown in /home/sp2020/public_html/bootstrapTut/inc/functions.php on line 116
+[25-Mar-2020 19:14:41 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ',' or ';' in /home/sp2020/public_html/bootstrapTut/admin/editRegisteredUser.php on line 33
+[25-Mar-2020 19:14:54 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ',' or ';' in /home/sp2020/public_html/bootstrapTut/admin/editRegisteredUser.php on line 33
+[25-Mar-2020 19:14:57 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ',' or ';' in /home/sp2020/public_html/bootstrapTut/admin/editRegisteredUser.php on line 33
+[25-Mar-2020 19:15:06 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ',' or ';' in /home/sp2020/public_html/bootstrapTut/admin/editRegisteredUser.php on line 33
+[25-Mar-2020 19:15:08 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ',' or ';' in /home/sp2020/public_html/bootstrapTut/admin/editRegisteredUser.php on line 33
+[25-Mar-2020 19:20:03 UTC] checked
+[25-Mar-2020 19:20:49 UTC] <input class='form-check-input' type='checkbox' id='isAdmin' value='Y'
+[25-Mar-2020 19:21:38 UTC] 0
+[25-Mar-2020 19:22:27 UTC] 0
+[25-Mar-2020 19:22:55 UTC] <input class='form-check-input' type='checkbox' id='isAdmin' value='Y'>
+[25-Mar-2020 19:23:36 UTC] <input class='form-check-input' type='checkbox' id='isAdmin' value='Y'>
+[25-Mar-2020 19:23:36 UTC] checked
+[25-Mar-2020 19:24:40 UTC] <input class='form-check-input' type='checkbox' id='isAdmin' value='Y'>2222
+[25-Mar-2020 19:24:40 UTC] checked
+[25-Mar-2020 19:25:08 UTC] <input class='form-check-input' type='checkbox' id='isAdmin' value='Y'2222>
+[25-Mar-2020 19:25:08 UTC] checked
+[25-Mar-2020 19:25:59 UTC] <input class='form-check-input' type='checkbox' id='isAdmin' value='Y'checked>
+[25-Mar-2020 19:25:59 UTC] checked
+[25-Mar-2020 19:29:53 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/sp2020/public_html/bootstrapTut/admin/updateUser.php on line 8
+[25-Mar-2020 20:28:50 UTC] PHP Parse error:  syntax error, unexpected 'header' (T_STRING) in /home/sp2020/public_html/bootstrapTut/admin/addUser.php on line 9
+[25-Mar-2020 20:30:25 UTC] PHP Parse error:  syntax error, unexpected 'header' (T_STRING) in /home/sp2020/public_html/bootstrapTut/admin/addUser.php on line 9

@@ -10,6 +10,7 @@ include 'admin_head.php';
 			<th>NAME</td>
 			<th>email</td>
 			<th>ROLE</td>
+			<th>Is Admin</td>
 			<th>UPDATE</td>
 			<th>DELETE</td>
 		</thead>
@@ -22,20 +23,21 @@ include 'admin_head.php';
 			"<td>" . $user["name"] . "</td>" .
 			"<td>" . $user["email"] . "</td>" .
 			"<td>" . $user["role"] . "</td>" .
-			'<td>' . '<form name="editForm" action="editRegisteredUser.php" method="POST">' .
+			"<td>" . $user["isAdmin"] . "</td>" .
+			'<td>' . '<form name="editForm" action="updateUserForm.php" method="POST">' .
 			'<input type="hidden" value="' . $user["id"] . '" name="id"/>' .
 			'<button type="submit" class="btn btn-primary" value ="Edit" name="editbtn">Edit</button> </form>' . "</td>" .
 
-			'<td>' . '<form name="deleteForm" action="deleteRegisteredUser.php" method="POST">' .
+			'<td>' . '<form class="delete" name="deleteForm" action="deleteUser.php" method="POST">' .
 			'<input type="hidden" value="' . $user["id"] . '" name="id"/>' .
-			'<button type="submit" class="btn btn-danger" value="Delete" name="deletebtn">Delete</button> </form>' .
+			'<button type="submit" class="btn btn-danger" value="Delete" id="deletebtn" name="deletebtn">Delete</button> </form>' .
 			'</td>';
 
 			echo "</tr>";
 		}
 		?>
 	</table>
-	<button class="btn btn-success" name="addBTN" onclick="window.location.href='addRegisteredUser.php'"> Add New User
+	<button class="btn btn-success" name="addBTN" onclick="window.location.href='addUserForm.php'"> Add New User
 	</button>
 	<br>
 </div>

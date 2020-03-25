@@ -43,7 +43,7 @@ define("PROJECT_PATH", "/bootstrapTut/");
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
-					<a class="nav-item nav-link active" href="index.php">Admin Home <span class="sr-only">(current)</span></a>
+					<a class="nav-item nav-link active" href="../index.php">Conf Home<span class="sr-only">(current)</span></a>
 					<a class="nav-item nav-link" href="manageUsers.php">Registrations</a>
 					<a class="nav-item nav-link" href="manageSchedule.php">Schedule</a>
 					<a class="nav-item nav-link" href="manageSpeakers.php">Speakers</a>

@@ -29,3 +29,12 @@
 .spacing {
 	padding-top: 60px;
 }
+
+
+.form-with-border {
+	position: relative;
+	padding: 1rem;
+	margin: 4rem 13rem;
+	border: solid #f7f7f9;
+	border-width: .2rem;
+}

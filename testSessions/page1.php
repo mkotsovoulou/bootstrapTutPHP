@@ -3,10 +3,11 @@ session_start();
 $_SESSION['username'] = "mairak";
 $_SESSION['firstname'] = "maira";
 $_SESSION['lastname'] = "kotsovoulou";
-$_SESSION['role'] = "A";
+$_SESSION['role'] = "U";
 
 echo $_SESSION['username'] . " " . $_SESSION['firstname'] . $_SESSION['lastname'];
 
+var_dump($_SESSION);
 
 ?>
 

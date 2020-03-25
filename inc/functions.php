@@ -74,20 +74,17 @@ function register($name, $email, $password, $role) {
 	$results->bindValue(3, $password);
 	$results->bindValue(4, $role);
 	$results->execute();
-
 	return $results->rowCount();
 }
 
 function searchSpeaker($name) {
 	include ('db.php');
 	$name = '%' . $name . '%';
-
 	$results = $db->prepare('select * from speakers where firstname like ? or lastname like ?');
 	$results->bindValue(1, $name);
 	$results->bindValue(2, $name);
 	$results->execute();
 	return $results;
-
 }
 
 function displayemails() {
@@ -102,18 +99,48 @@ function getRegisteredUsers() {
 	$results = $db->query("select * from registration"); //if the query is wrong $results is false
 	$data = $results->fetchAll(PDO::FETCH_ASSOC);
 	return $data;
+}
+
+function getRegisteredUserById($id) {
+	include ('db.php');
+	session_start();
+	$results = $db->prepare('SELECT * FROM registration WHERE id = ?');
+	$results->bindValue(1, $id);
+	$results->execute();
+	$userInfo = $results->fetchAll(PDO::FETCH_ASSOC);
+	return $userInfo;
+}
+
+function updateRegistration($id, $name, $email, $role, $isAdmin) {
+	include ('db.php');
+
+	$results = $db->prepare('update registration set name = ?, email=?, role= ?, isAdmin= ? where id = ?');
+	$results->bindValue(1, $name);
+	$results->bindValue(2, $email);
+	$results->bindValue(3, $role);
+	$results->bindValue(4, $isAdmin);
+	$results->bindValue(5, $id);
+	$results->execute();
+	return $results->rowCount();
 
 }
 
-function updateAvatar($email, $img) {
+function deleteRegistration($id) {
+	include ('db.php');
 
+	$results = $db->prepare('delete from registration where id = ?');
+	$results->bindValue(1, $id);
+	$results->execute();
+	return $results->rowCount();
+}
+
+function updateAvatar($email, $img) {
 	include ('db.php');
 	$results = $db->prepare('update registration set avatar = ? where email = ?');
 	$results->bindValue(1, $img);
 	$results->bindValue(2, $email);
 	$results->execute();
 	return $results->rowCount();
-
 }
 
 function getAllUsers() {
@@ -121,7 +148,29 @@ function getAllUsers() {
 	$results = $db->query("select * from registration"); //if the query is wrong $results is false
 	$data = $results->fetchAll(PDO::FETCH_ASSOC);
 	return $data;
+}
 
+function listRoles($selected) {
+	$selected_role = $selected;
+	$temp_str = '';
+	$temp_str .= "<select class='form-control' name='role'>";
+
+	$roles_array = array("full stack js developer" => "Full Stack JavaScript Developer",
+		"front end developer" => "Front End Developer",
+		"back end developer" => "Back End Developer",
+		"designer" => "Designer",
+		"student" => "Student");
+	foreach ($roles_array as $key => $value) {
+		if ($key == $selected_role) {
+			// For selected option.
+			$temp_str .= '<option value="'.$key.'" selected>'.$value.'</option>';
+		} else {
+			$temp_str .= '<option value="'.$key.'">'.$value.'</option>';
+		}
+	}
+	$temp_str .= '</select>';
+
+	return $temp_str;
 
 }
 

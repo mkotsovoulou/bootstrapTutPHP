@@ -23,6 +23,10 @@ $(document).ready(function() {
 		});
 	});
 
+	$('.delete').click(function(e) {
+		if (!confirm('Are you sure you want to DELETE this user?'))
+			e.preventDefault();
+	});
 
 	//CODE TO HANDLE THE SUBMIT OF THE REGISTRATION FORM
 	$('#registrationForm').submit(function(e) {
